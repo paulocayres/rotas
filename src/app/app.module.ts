@@ -10,39 +10,39 @@ import { MaterializeModule } from 'angular2-materialize';
 
 //Componentes
 import { AppComponent } from './app.component';
-import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+
 
 //Serviços
-import { CursosService } from './cursos/cursos.service';
 
 //Módulos
-import { routing } from './app.routing';
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+//import { routing } from './app.routing';
+//import { AlunosComponent } from './alunos/alunos.component';
+import { AppRoutingModule } from './app.routing.module';
+import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursosComponent,
     HomeComponent,
     LoginComponent,
-    CursoDetalheComponent,
-    CursoNaoEncontradoComponent
+    //AlunosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-    MaterializeModule
+    MaterializeModule,
+    CursosModule,
+    AlunosModule,
+    AppRoutingModule
   ],
-  providers: [
-    CursosService
-  ],
+
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
