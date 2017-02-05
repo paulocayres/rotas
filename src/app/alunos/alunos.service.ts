@@ -1,3 +1,5 @@
+import { element } from 'protractor';
+import { AlunosModule } from './alunos.module';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -16,6 +18,9 @@ export class AlunosService {
   }
 
   getAluno(id: number){
+
+    let alunos = this.getAlunos();
+    return alunos[id-1];
     
   }
 

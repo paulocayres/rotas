@@ -8,7 +8,7 @@ import { AlunosService } from './alunos.service';
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
-export class AlunosComponent implements OnInit {
+export class AlunosComponent implements OnInit{
 
   alunos: any[] = [];
 

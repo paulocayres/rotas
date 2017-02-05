@@ -1,9 +1,15 @@
-<p>
-    Lista de Alunos:
-</p>
+<div class="row">
+    <div class="col s4">
+        <p>
+            Lista de Alunos:
+        </p>
 
-<div class="collection">
-    <a class="collection-item" *ngFor="let aluno of alunos" [routerLink]="['/aluno', aluno.id]">Id:{{aluno.id}} - Nome: {{aluno.nome}} - Email: {{aluno.email}}</a>
+        <div class="collection">
+            <a class="collection-item" *ngFor="let aluno of alunos" [routerLink]="[aluno.id]">Id:{{aluno.id}} - Nome: {{aluno.nome}} - Email: {{aluno.email}}</a>
+        </div>
+    </div>
+    <div class="col s8">
+        <router-outlet></router-outlet>
+    </div>
+
 </div>
-
-<router-outlet></router-outlet>
