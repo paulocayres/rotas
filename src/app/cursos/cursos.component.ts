@@ -17,7 +17,7 @@ export class CursosComponent implements OnInit {
     cursos: any[];
     pagina: number;
     inscricao: Subscription;
-    id: number;
+    //id: number;
 
   constructor(
     private route: ActivatedRoute,

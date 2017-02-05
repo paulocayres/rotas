@@ -1,12 +1,18 @@
+//Angular
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-
-import { AlunosComponent }   from './alunos.component';
-
+//Módulo de rotas
 import { AlunosRoutingModule } from './alunos.routing.module';
+
+//Componentes
+import { AlunosComponent }   from './alunos.component';
 import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
+
+//Serviços
+import { AlunosService } from './alunos.service';
+
 
 
 @NgModule({
@@ -20,6 +26,6 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
         AlunosFormComponent,
         AlunoDetalheComponent
     ],
-    providers: [],
+    providers: [AlunosService],
 })
 export class AlunosModule { }
