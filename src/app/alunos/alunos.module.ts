@@ -1,6 +1,8 @@
 //Angular
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 //Módulo de rotas
 import { AlunosRoutingModule } from './alunos.routing.module';
@@ -18,7 +20,8 @@ import { AlunosService } from './alunos.service';
 @NgModule({
     imports: [
         AlunosRoutingModule,
-        CommonModule
+        CommonModule,
+        FormsModule
     ],
     exports: [],
     declarations: [

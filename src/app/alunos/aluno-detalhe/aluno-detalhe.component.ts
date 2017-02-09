@@ -1,6 +1,8 @@
 //Angular
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 //Outras Bibliotecas
 import { Subscription } from 'rxjs/Rx';
@@ -20,7 +22,8 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private alunosService: AlunosService
+    private alunosService: AlunosService,
+    private router: Router  
   ) { }
 
   ngOnInit() {
@@ -30,6 +33,10 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
         this.aluno = this.alunosService.getAluno(id);
       }
     );
+  }
+
+  editarAluno(){
+    this.router.navigate(['/alunos', this.aluno.id, 'editar']);
   }
 
   ngOnDestroy(){
