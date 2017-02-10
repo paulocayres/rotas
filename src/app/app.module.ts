@@ -20,8 +20,9 @@ import { LoginComponent } from './login/login.component';
 //import { routing } from './app.routing';
 //import { AlunosComponent } from './alunos/alunos.component';
 import { AppRoutingModule } from './app.routing.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+import { AuthService } from './login/auth.service';
+//import { CursosModule } from './cursos/cursos.module';
+//import { AlunosModule } from './alunos/alunos.module';
 
 
 
@@ -37,12 +38,14 @@ import { AlunosModule } from './alunos/alunos.module';
     FormsModule,
     HttpModule,
     MaterializeModule,
-    CursosModule,
-    AlunosModule,
+    //CursosModule,
+    //AlunosModule,
     AppRoutingModule
   ],
 
-  providers: [ ],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
