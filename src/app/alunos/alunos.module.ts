@@ -14,6 +14,8 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 
 //Serviços
 import { AlunosService } from './alunos.service';
+import { AuthGuard } from './../guards/auth.guard';
+
 
 
 
@@ -29,6 +31,6 @@ import { AlunosService } from './alunos.service';
         AlunosFormComponent,
         AlunoDetalheComponent
     ],
-    providers: [AlunosService],
+    providers: [AlunosService]
 })
 export class AlunosModule { }
